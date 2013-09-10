@@ -1,0 +1,85 @@
+\hypertarget{namespaceprocessing}{\section{processing Namespace Reference}
+\label{namespaceprocessing}\index{processing@{processing}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceprocessing_a4ede72fed6a7d1f9242692c586d0604c}{processing\-\_\-data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceprocessing_a4ede72fed6a7d1f9242692c586d0604c}{\index{processing@{processing}!processing\-\_\-data@{processing\-\_\-data}}
+\index{processing\-\_\-data@{processing\-\_\-data}!processing@{processing}}
+\subsubsection[{processing\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}def processing.\-processing\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{}]{path, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceprocessing_a4ede72fed6a7d1f9242692c586d0604c}
+
+
+Definition at line 12 of file processing.\-py.
+
+
+
+References fitting.\-performing\-\_\-fits(), plots.\-plot\-\_\-fig9\-\_\-a(), fitting.\-saving\-\_\-fcs(), writing\-\_\-output.\-saving\-\_\-output(), and fitting.\-saving\-\_\-ws().
+
+
+\begin{DoxyCode}
+12 
+13 \textcolor{keyword}{def }\hyperlink{namespaceprocessing_a4ede72fed6a7d1f9242692c586d0604c}{processing\_data}(path, dataset, outfolder):
+14     data = [] 
+15     fc = []
+16     
+17     
+18     \textcolor{stringliteral}{"""}
+19 \textcolor{stringliteral}{    Loading data}
+20 \textcolor{stringliteral}{    """}
+21     
+22     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Loading dataset %d..."} %dataset
+23     
+24     data.append(load(path, unpack=\textcolor{keyword}{True}))        \textcolor{comment}{# open/read the defined dataset}
+25                                                 \textcolor{comment}{#the columns are saved as
+       arrays so data[0][0] is E, data[0][1] is H\_E for l=0.001, etc...)}
+26     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Done!"}
+27     
+28     
+29 
+30     \textcolor{stringliteral}{""" }
+31 \textcolor{stringliteral}{    Fitting and saving}
+32 \textcolor{stringliteral}{    """}
+33     
+34     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Starting fittings for dataset %d..."} %dataset
+35     
+36     fc = \hyperlink{namespacefitting_af5c1bdc3899d88e6560fe1c541be148b}{performing\_fits}(x0, data)                      \textcolor{comment}{# 2d
+       array fc[19][4] for fc[luminosities=20][number of fittings = 5] for all 5 fittings
+       in the defined dataset}
+37     fc1, fc2, fc3, fc4, fc5 = \hyperlink{namespacefitting_a3494176c72224d391190d72b0fe0676b}{saving\_fcs}(fc)            \textcolor{comment}{# 1d arrays
+       fci[20] with all fcs for every luminosity in the defined dataset}
+38     w1, w2, w3, w4, fcw1, fcw2, fcw3 =  \hyperlink{namespacefitting_a601807b2eec00b78d8a0150cc623984b}{saving\_ws}(fc)   \textcolor{comment}{# 1d arrays
+       wi[20], fcwi[20] (dilution factor and wi*fci**4) for every luminosity in the
+       defined dataset}
+39     \hyperlink{namespacewriting__output_a38fcefce14547fbc4188810848ede40f}{saving\_output}(l, fc, fcw1, fcw2, fcw3, dataset, outfolder)    
+                      \textcolor{comment}{# writing output text file (table for the defined dataset)}
+40     
+41     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Done!"}
+42         
+43         
+44     
+45     \textcolor{stringliteral}{"""}
+46 \textcolor{stringliteral}{    Plotting}
+47 \textcolor{stringliteral}{    """}
+48     
+49     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Starting plots for dataset %d..."} %dataset
+50     
+51     \textcolor{comment}{#plot\_fig3(data, dataset, outfolder)}
+52     \textcolor{comment}{#plot\_fig7(data, fc, dataset, outfolder)}
+53     \textcolor{comment}{#plot\_fig8(data, fc, dataset, outfolder)}
+54     \hyperlink{namespaceplots_a74a7bbf287bc475f37258971812b7f7f}{plot\_fig9\_a}(l, fc1, fc2, fc3, fc4, fc5, dataset, outfolder)
+55     \textcolor{comment}{#plot\_fig9\_b(l, fc1, fc2, fc3, fc4, fc5, dataset, outfolder)}
+56     \textcolor{comment}{#plot\_fig10\_a(l, w1, w2, w3, w4, dataset, outfolder)}
+57     \textcolor{comment}{#plot\_fig10\_b(l, w1, w2, w3, w4, dataset, outfolder)}
+58     
+    \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Done!"}\end{DoxyCode}

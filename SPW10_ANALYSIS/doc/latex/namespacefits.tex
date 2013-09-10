@@ -1,0 +1,175 @@
+\hypertarget{namespacefits}{\section{fits Namespace Reference}
+\label{namespacefits}\index{fits@{fits}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacefits_a4b277b709c2c188492437ce2fb78104c}{fit1}
+\item 
+def \hyperlink{namespacefits_a658a2cd8ad9139dcf17cd953d0a51317}{fit2}
+\item 
+def \hyperlink{namespacefits_abb5a48646bf6fb0597491c61593ee653}{fit3}
+\item 
+def \hyperlink{namespacefits_a5b6c35d2c62b21322e8f4eb1d3d4d317}{fit5}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacefits_a4b277b709c2c188492437ce2fb78104c}{\index{fits@{fits}!fit1@{fit1}}
+\index{fit1@{fit1}!fits@{fits}}
+\subsubsection[{fit1}]{\setlength{\rightskip}{0pt plus 5cm}def fits.\-fit1 (
+\begin{DoxyParamCaption}
+\item[{}]{parameters, }
+\item[{}]{energy, }
+\item[{}]{H\-\_\-\-E, }
+\item[{}]{index}
+\end{DoxyParamCaption}
+)}}\label{namespacefits_a4b277b709c2c188492437ce2fb78104c}
+\begin{DoxyVerb}In the first fit, we minimize the sum
+
+sum^N_n=1 (F_En - w1*B_En(fc1*Teff))^2
+
+where N is the number of photon energy points in the
+considered band.\end{DoxyVerb}
+ 
+
+Definition at line 13 of file fits.\-py.
+
+
+\begin{DoxyCode}
+13 
+14 \textcolor{keyword}{def }\hyperlink{namespacefits_a4b277b709c2c188492437ce2fb78104c}{fit1}(parameters, energy, H\_E, index):
+15     
+16     \textcolor{stringliteral}{"""}
+17 \textcolor{stringliteral}{    In the first fit, we minimize the sum}
+18 \textcolor{stringliteral}{    }
+19 \textcolor{stringliteral}{    sum^N\_n=1 (F\_En - w1*B\_En(fc1*Teff))^2}
+20 \textcolor{stringliteral}{}
+21 \textcolor{stringliteral}{    where N is the number of photon energy points in the}
+22 \textcolor{stringliteral}{    considered band.}
+23 \textcolor{stringliteral}{}
+24 \textcolor{stringliteral}{    """} 
+25     
+26     b = \hyperlink{namespaceblackbody}{blackbody}(parameters, energy, index) 
+27     \textcolor{keywordflow}{return}  H\_E - b
+28 
+29 
+30 
+31 
+
+\end{DoxyCode}
+\hypertarget{namespacefits_a658a2cd8ad9139dcf17cd953d0a51317}{\index{fits@{fits}!fit2@{fit2}}
+\index{fit2@{fit2}!fits@{fits}}
+\subsubsection[{fit2}]{\setlength{\rightskip}{0pt plus 5cm}def fits.\-fit2 (
+\begin{DoxyParamCaption}
+\item[{}]{parameters, }
+\item[{}]{energy, }
+\item[{}]{H\-\_\-\-E, }
+\item[{}]{index}
+\end{DoxyParamCaption}
+)}}\label{namespacefits_a658a2cd8ad9139dcf17cd953d0a51317}
+\begin{DoxyVerb}We fit the photon count flux, not the energy flux, so the
+second fit minimize
+
+sum^N_n=1 (F_En - w2*B_En(fc2*Teff))^2/E^2_n.\end{DoxyVerb}
+ 
+
+Definition at line 32 of file fits.\-py.
+
+
+\begin{DoxyCode}
+32 
+33 \textcolor{keyword}{def }\hyperlink{namespacefits_a658a2cd8ad9139dcf17cd953d0a51317}{fit2}(parameters, energy, H\_E, index):
+34     \textcolor{stringliteral}{"""}
+35 \textcolor{stringliteral}{    We fit the photon count flux, not the energy flux, so the}
+36 \textcolor{stringliteral}{    second fit minimize}
+37 \textcolor{stringliteral}{}
+38 \textcolor{stringliteral}{    sum^N\_n=1 (F\_En - w2*B\_En(fc2*Teff))^2/E^2\_n.}
+39 \textcolor{stringliteral}{}
+40 \textcolor{stringliteral}{    """}
+41     
+42     b = \hyperlink{namespaceblackbody}{blackbody}(parameters, energy, index) 
+43     \textcolor{keywordflow}{return}  (H\_E - b)/energy
+44 
+45 
+46 
+47 
+
+\end{DoxyCode}
+\hypertarget{namespacefits_abb5a48646bf6fb0597491c61593ee653}{\index{fits@{fits}!fit3@{fit3}}
+\index{fit3@{fit3}!fits@{fits}}
+\subsubsection[{fit3}]{\setlength{\rightskip}{0pt plus 5cm}def fits.\-fit3 (
+\begin{DoxyParamCaption}
+\item[{}]{parameters, }
+\item[{}]{energy, }
+\item[{}]{H\-\_\-\-E, }
+\item[{}]{index}
+\end{DoxyParamCaption}
+)}}\label{namespacefits_abb5a48646bf6fb0597491c61593ee653}
+\begin{DoxyVerb}In the third fit we minimize
+
+sum^N_n=1 (F_En - w3*B_En(fc3*Teff))^2*En.\end{DoxyVerb}
+ 
+
+Definition at line 48 of file fits.\-py.
+
+
+\begin{DoxyCode}
+48 
+49 \textcolor{keyword}{def }\hyperlink{namespacefits_abb5a48646bf6fb0597491c61593ee653}{fit3}(parameters, energy, H\_E, index):
+50     \textcolor{stringliteral}{"""}
+51 \textcolor{stringliteral}{    In the third fit we minimize}
+52 \textcolor{stringliteral}{}
+53 \textcolor{stringliteral}{    sum^N\_n=1 (F\_En - w3*B\_En(fc3*Teff))^2*En.}
+54 \textcolor{stringliteral}{}
+55 \textcolor{stringliteral}{    """}
+56     
+57     b = \hyperlink{namespaceblackbody}{blackbody}(parameters, energy, index) 
+58     \textcolor{keywordflow}{return}  (H\_E - b)*energy
+59 
+60 
+61 \textcolor{stringliteral}{"""}
+62 \textcolor{stringliteral}{The fourth fit is the same as the first with other different}
+63 \textcolor{stringliteral}{inputs, i.e. we make w4 = fc4^-4.}
+64 \textcolor{stringliteral}{}
+65 \textcolor{stringliteral}{"""}
+66 
+67 
+68 
+
+\end{DoxyCode}
+\hypertarget{namespacefits_a5b6c35d2c62b21322e8f4eb1d3d4d317}{\index{fits@{fits}!fit5@{fit5}}
+\index{fit5@{fit5}!fits@{fits}}
+\subsubsection[{fit5}]{\setlength{\rightskip}{0pt plus 5cm}def fits.\-fit5 (
+\begin{DoxyParamCaption}
+\item[{}]{parameters, }
+\item[{}]{energy, }
+\item[{}]{H\-\_\-\-E, }
+\item[{}]{index}
+\end{DoxyParamCaption}
+)}}\label{namespacefits_a5b6c35d2c62b21322e8f4eb1d3d4d317}
+\begin{DoxyVerb}The fifth fit is obtained by dividing the peak energy of H_E to the blakckbody
+spectrum, as done in Madej et al, 2004.\end{DoxyVerb}
+ 
+
+Definition at line 69 of file fits.\-py.
+
+
+
+Referenced by fitting.\-performing\-\_\-fits().
+
+
+\begin{DoxyCode}
+69 
+70 \textcolor{keyword}{def }\hyperlink{namespacefits_a5b6c35d2c62b21322e8f4eb1d3d4d317}{fit5}(parameters, energy, H\_E, index):
+71     \textcolor{stringliteral}{"""}
+72 \textcolor{stringliteral}{    The fifth fit is obtained by dividing the peak energy of H\_E to the
+       blakckbody}
+73 \textcolor{stringliteral}{    spectrum, as done in Madej et al, 2004.}
+74 \textcolor{stringliteral}{}
+75 \textcolor{stringliteral}{    """}
+76     
+77     b = \hyperlink{namespaceblackbody}{blackbody}(parameters, energy, index) 
+78     b\_max = max(b)
+79     H\_E\_max = max(H\_E)
+    \textcolor{keywordflow}{return} 0.2, (b\_max/2)/(H\_E\_max)\end{DoxyCode}

@@ -1,0 +1,42 @@
+\hypertarget{namespaceblackbody}{\section{blackbody Namespace Reference}
+\label{namespaceblackbody}\index{blackbody@{blackbody}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceblackbody_a0e46dc7c90aeee75ceb63d5cdaa36a8b}{blackbody}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceblackbody_a0e46dc7c90aeee75ceb63d5cdaa36a8b}{\index{blackbody@{blackbody}!blackbody@{blackbody}}
+\index{blackbody@{blackbody}!blackbody@{blackbody}}
+\subsubsection[{blackbody}]{\setlength{\rightskip}{0pt plus 5cm}def blackbody.\-blackbody (
+\begin{DoxyParamCaption}
+\item[{}]{parameters, }
+\item[{}]{energy, }
+\item[{}]{index}
+\end{DoxyParamCaption}
+)}}\label{namespaceblackbody_a0e46dc7c90aeee75ceb63d5cdaa36a8b}
+\begin{DoxyVerb}The Planck function for a blackbody spectrum.\end{DoxyVerb}
+ 
+
+Definition at line 3 of file blackbody.\-py.
+
+
+\begin{DoxyCode}
+3 
+4 \textcolor{keyword}{def }\hyperlink{namespaceblackbody_a0e46dc7c90aeee75ceb63d5cdaa36a8b}{blackbody}(parameters, energy, index):
+5     \textcolor{stringliteral}{"""}
+6 \textcolor{stringliteral}{    The Planck function for a blackbody spectrum.}
+7 \textcolor{stringliteral}{}
+8 \textcolor{stringliteral}{    """}
+9     
+10     w0 = parameters[0]
+11     fc0 = parameters[1]
+12     T = Teff[index]
+13     b = (w0/2) * (energy)**3 * (1/(exp(energy/(fc0*T)) -1)) / hc\_keV**2 / h\_keV
+       * (1/(erg\_to\_keV))
+14     \textcolor{keywordflow}{return} b
+15 
+\end{DoxyCode}

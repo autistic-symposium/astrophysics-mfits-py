@@ -1,0 +1,416 @@
+\hypertarget{namespaceplots}{\section{plots Namespace Reference}
+\label{namespaceplots}\index{plots@{plots}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceplots_ae22006100f251189d74d264d94f66c73}{plot\-\_\-fig3}
+\item 
+def \hyperlink{namespaceplots_aca6d712ff93da3c51f860c59002b27f6}{plot\-\_\-fig7}
+\item 
+def \hyperlink{namespaceplots_a5c2ad378a558169804cee2b5b33d8a8c}{plot\-\_\-fig8}
+\item 
+def \hyperlink{namespaceplots_a74a7bbf287bc475f37258971812b7f7f}{plot\-\_\-fig9\-\_\-a}
+\item 
+def \hyperlink{namespaceplots_a92449504b21a76afd26841039c23c6f2}{plot\-\_\-fig9\-\_\-b}
+\item 
+def \hyperlink{namespaceplots_a81b9d32cbc6d637662c2073398095b23}{plot\-\_\-fig10\-\_\-a}
+\item 
+def \hyperlink{namespaceplots_af585e3b7e72016bb31d3faf91c4bd972}{plot\-\_\-fig10\-\_\-b}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceplots_a81b9d32cbc6d637662c2073398095b23}{\index{plots@{plots}!plot\-\_\-fig10\-\_\-a@{plot\-\_\-fig10\-\_\-a}}
+\index{plot\-\_\-fig10\-\_\-a@{plot\-\_\-fig10\-\_\-a}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig10\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig10\-\_\-a (
+\begin{DoxyParamCaption}
+\item[{}]{l, }
+\item[{}]{w1, }
+\item[{}]{w2, }
+\item[{}]{w3, }
+\item[{}]{w4, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_a81b9d32cbc6d637662c2073398095b23}
+\begin{DoxyVerb}This plot show the dependence of dilution factor on the relative luminosity 
+for the surface gravity calculated by the 4 procedures.\end{DoxyVerb}
+ 
+
+Definition at line 166 of file plots.\-py.
+
+
+\begin{DoxyCode}
+166 
+167 \textcolor{keyword}{def }\hyperlink{namespaceplots_a81b9d32cbc6d637662c2073398095b23}{plot\_fig10\_a}(l, w1, w2, w3, w4, dataset, outfolder):
+168     \textcolor{stringliteral}{"""}
+169 \textcolor{stringliteral}{    This plot show the dependence of dilution factor on the relative luminosity
+       }
+170 \textcolor{stringliteral}{    for the surface gravity calculated by the 4 procedures.}
+171 \textcolor{stringliteral}{    }
+172 \textcolor{stringliteral}{    """}
+173     
+174     plt.figure()
+175     file = \textcolor{stringliteral}{'/set\_%d\_fig10a.png'} %dataset
+176     out = outfolder + file
+177     
+178     plt.plot(l, w1,  \textcolor{stringliteral}{'y.-'})
+179     plt.plot(l, w2,  \textcolor{stringliteral}{'r--'})
+180     plt.plot(l, w3, \textcolor{stringliteral}{'bo'})
+181     plt.plot(l, w4, \textcolor{stringliteral}{'-.'})
+182     
+183     plt.xlabel(\textcolor{stringliteral}{'$L/L\_\{Edd\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+184     plt.ylabel(\textcolor{stringliteral}{'Dilution factor $w$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+185     plt.title(\textcolor{stringliteral}{'Dependence of the Dilution Factors to the Luminosity, for
+       dataset %d'} %dataset,fontdict=\{\textcolor{stringliteral}{'fontsize'}:12\})
+186     plt.axis([0, 1.0,0,0.7], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+187     plt.legend((\textcolor{stringliteral}{'First fit'}, \textcolor{stringliteral}{'Second fit'}, \textcolor{stringliteral}{'Third fit'}, \textcolor{stringliteral}{'Fourth fit'}),\textcolor{stringliteral}{'lower
+       right'}, shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+188     
+189     plt. savefig(out)
+190     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 10a from was written in %s."} %out
+191     \textcolor{keywordflow}{return} 0
+192     
+    
+\end{DoxyCode}
+\hypertarget{namespaceplots_af585e3b7e72016bb31d3faf91c4bd972}{\index{plots@{plots}!plot\-\_\-fig10\-\_\-b@{plot\-\_\-fig10\-\_\-b}}
+\index{plot\-\_\-fig10\-\_\-b@{plot\-\_\-fig10\-\_\-b}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig10\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig10\-\_\-b (
+\begin{DoxyParamCaption}
+\item[{}]{l, }
+\item[{}]{w1, }
+\item[{}]{w2, }
+\item[{}]{w3, }
+\item[{}]{w4, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_af585e3b7e72016bb31d3faf91c4bd972}
+\begin{DoxyVerb}This plot show the dependence of the normalized dilution factor
+(to the first fit procedure) on the relative luminosity for8 the surface.
+\end{DoxyVerb}
+ 
+
+Definition at line 193 of file plots.\-py.
+
+
+\begin{DoxyCode}
+193 
+194 \textcolor{keyword}{def }\hyperlink{namespaceplots_af585e3b7e72016bb31d3faf91c4bd972}{plot\_fig10\_b}(l, w1, w2, w3, w4, dataset, outfolder):
+195     \textcolor{stringliteral}{"""}
+196 \textcolor{stringliteral}{    This plot show the dependence of the normalized dilution factor}
+197 \textcolor{stringliteral}{    (to the first fit procedure) on the relative luminosity for8 the surface.}
+198 \textcolor{stringliteral}{    """}
+199     
+200     plt.figure()
+201     file = \textcolor{stringliteral}{'/set\_%d\_fig10b.png'} %dataset
+202     out = outfolder + file
+203     
+204     aw1 = array(w1)
+205     aw2 = array(w2)
+206     aw3 = array(w3)
+207     aw4 = array(w4)
+208 
+209     plt.plot(l, aw2/aw1,  \textcolor{stringliteral}{'r--'})
+210     plt.plot(l, aw3/aw1, \textcolor{stringliteral}{'bo'})
+211     plt.plot(l, aw4/aw1, \textcolor{stringliteral}{'g'})
+212     
+213     plt.xlabel(\textcolor{stringliteral}{'$L/L\_\{Edd\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+214     plt.ylabel(\textcolor{stringliteral}{'$w\_\{c,i\}/w\_\{c,1\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+215     plt.title(\textcolor{stringliteral}{'Ratio of the first dilution factor to the other 4 fits vs
+       Luminosity, for dataset %d'} %dataset,fontdict=\{\textcolor{stringliteral}{'fontsize'}:12\})
+216     plt.axis([0, 1.0,0.8,1.8], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+217     plt.legend((\textcolor{stringliteral}{'$w\_\{2\}/w\_\{1\}$'}, \textcolor{stringliteral}{'$w\_\{3\}/w\_\{1\}$'}, \textcolor{stringliteral}{'$w\_\{4\}/w\_\{1\}$'}),\textcolor{stringliteral}{'lower right
+      '}, shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+218     
+219     plt. savefig(out)
+220     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 10b from was written in %s."} %out
+    \textcolor{keywordflow}{return} 0\end{DoxyCode}
+\hypertarget{namespaceplots_ae22006100f251189d74d264d94f66c73}{\index{plots@{plots}!plot\-\_\-fig3@{plot\-\_\-fig3}}
+\index{plot\-\_\-fig3@{plot\-\_\-fig3}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig3}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig3 (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_ae22006100f251189d74d264d94f66c73}
+\begin{DoxyVerb}This function just plot the H_E vs E from the table (just visualization of the data).\end{DoxyVerb}
+ 
+
+Definition at line 14 of file plots.\-py.
+
+
+\begin{DoxyCode}
+14 
+15 \textcolor{keyword}{def }\hyperlink{namespaceplots_ae22006100f251189d74d264d94f66c73}{plot\_fig3}(data, dataset, outfolder):
+16     \textcolor{stringliteral}{"""}
+17 \textcolor{stringliteral}{    This function just plot the H\_E vs E from the table (just visualization of
+       the data).}
+18 \textcolor{stringliteral}{    }
+19 \textcolor{stringliteral}{    """}
+20     
+21     plt.figure()
+22     file = \textcolor{stringliteral}{'/set\_%d\_fig3.png'} %dataset
+23     out = outfolder + file
+24     
+25     plt.loglog(data[0][0], data[0][1])
+26     plt.loglog(data[0][0], data[0][3])
+27     plt.loglog(data[0][0], data[0][7])
+28     plt.loglog(data[0][0], data[0][12])
+29     
+30     plt.xlabel(\textcolor{stringliteral}{'$E (keV)$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+31     plt.ylabel(\textcolor{stringliteral}{'$H\_E$(erg s$^\{-1\}$ cm$^\{-2\}$ keV$^\{-1\}$)'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:
+      20\})
+32     plt.title(\textcolor{stringliteral}{'Emergent (unredshifted) spectra for dataset %d'} %dataset,
+      fontdict=\{\textcolor{stringliteral}{'fontsize'}:14\})
+33     plt.legend((\textcolor{stringliteral}{'$l=0.001$'},  \textcolor{stringliteral}{'$l=0.01$'}, \textcolor{stringliteral}{'$l=0.1$'},\textcolor{stringliteral}{'$l=0.5$'}),
+34            \textcolor{stringliteral}{'lower left'}, shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+35     plt.axis([3.2, 20,1e14,1e24], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+36     
+37     plt. savefig(out)
+38     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 3 from was written in %s."} %out
+39     \textcolor{keywordflow}{return} 0
+40 
+41 
+
+\end{DoxyCode}
+\hypertarget{namespaceplots_aca6d712ff93da3c51f860c59002b27f6}{\index{plots@{plots}!plot\-\_\-fig7@{plot\-\_\-fig7}}
+\index{plot\-\_\-fig7@{plot\-\_\-fig7}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig7}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig7 (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{fc, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_aca6d712ff93da3c51f860c59002b27f6}
+\begin{DoxyVerb}This plot compares the first and the fourth fits, to verify the accuracy of a one-parameter
+fitting to a two-parameter fitting.\end{DoxyVerb}
+ 
+
+Definition at line 42 of file plots.\-py.
+
+
+\begin{DoxyCode}
+42 
+43 \textcolor{keyword}{def }\hyperlink{namespaceplots_aca6d712ff93da3c51f860c59002b27f6}{plot\_fig7}(data, fc, dataset, outfolder):
+44     \textcolor{stringliteral}{"""}
+45 \textcolor{stringliteral}{    This plot compares the first and the fourth fits, to verify the accuracy of
+       a one-parameter}
+46 \textcolor{stringliteral}{    fitting to a two-parameter fitting.}
+47 \textcolor{stringliteral}{    }
+48 \textcolor{stringliteral}{    """}
+49     
+50     plt.figure()
+51     file = \textcolor{stringliteral}{'/set\_%d\_fig7.png'} %dataset
+52     out = outfolder + file
+53     
+54     plt.loglog(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(fc[0][0], data[0][0], 0)), \textcolor{stringliteral}{'m'})
+55     plt.loglog(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(fc[0][3], data[0][0], 0)), \textcolor{stringliteral}{'m--'}
+      )
+56     plt.loglog(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(fc[19][0], data[0][0], 19)), \textcolor{stringliteral}{'}\textcolor{stringliteral}{r'
+      )}
+57 \textcolor{stringliteral}{    plt.loglog(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(fc[19][3], data[0][0], 19)), }\textcolor{stringliteral}{'
+      r--'})
+58     plt.loglog(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(x0, data[0][0], 0)), \textcolor{stringliteral}{'b'})
+59     plt.loglog(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(x0, data[0][0], 19)), \textcolor{stringliteral}{'b'})
+60     
+61     
+62     plt.xlabel(\textcolor{stringliteral}{'$E (keV)$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+63     plt.ylabel(\textcolor{stringliteral}{'$H\_E$(erg s$^\{-1\}$ cm$^\{-2\}$ keV$^\{-1\})$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:
+      20\})  
+64     plt.title(\textcolor{stringliteral}{' Examples of computed Spectra by the $1^\{rt\}$ and $4^\{nd\}$ Fit
+       Procedure, for dataset %d'} %dataset,fontdict=\{\textcolor{stringliteral}{'fontsize'}:12\})
+65     plt.axis([3.2, 20,1e14,1e24], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+66     plt.legend((\textcolor{stringliteral}{'$l=0.001$, first fit'}, \textcolor{stringliteral}{'$l=0.001$, fourth fit'}, \textcolor{stringliteral}{'$l=0.95$,
+       first fit'}, \textcolor{stringliteral}{'$l=0.95$, fourth fit'}, \textcolor{stringliteral}{'$l=0.001$, BB'}, \textcolor{stringliteral}{'$l=0.95$, BB'}),\textcolor{stringliteral}{'lower left'}, 
+      shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+67     
+68     plt. savefig(out) 
+69     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 7 from was written in %s."} %out
+70     \textcolor{keywordflow}{return} 0
+71 
+72 
+73 
+
+\end{DoxyCode}
+\hypertarget{namespaceplots_a5c2ad378a558169804cee2b5b33d8a8c}{\index{plots@{plots}!plot\-\_\-fig8@{plot\-\_\-fig8}}
+\index{plot\-\_\-fig8@{plot\-\_\-fig8}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig8}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig8 (
+\begin{DoxyParamCaption}
+\item[{}]{data, }
+\item[{}]{fc, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_a5c2ad378a558169804cee2b5b33d8a8c}
+\begin{DoxyVerb}This plot compares the first and the second fits, to verify the residual energy dependence.\end{DoxyVerb}
+ 
+
+Definition at line 74 of file plots.\-py.
+
+
+\begin{DoxyCode}
+74 
+75 \textcolor{keyword}{def }\hyperlink{namespaceplots_a5c2ad378a558169804cee2b5b33d8a8c}{plot\_fig8}(data, fc, dataset, outfolder):
+76     \textcolor{stringliteral}{"""}
+77 \textcolor{stringliteral}{    This plot compares the first and the second fits, to verify the residual
+       energy dependence.}
+78 \textcolor{stringliteral}{    }
+79 \textcolor{stringliteral}{    """}
+80     
+81     plt.figure()
+82     file = \textcolor{stringliteral}{'/set\_%d\_fig8.png'} %dataset
+83     out = outfolder + file
+84     
+85     plt.semilogx(data[0][0], (0.2+\hyperlink{namespaceblackbody}{blackbody}(fc[7][0], data[0][0], 7)/(
+      data[0][8]/(4*pi)) ) -1, \textcolor{stringliteral}{'m'})
+86     plt.semilogx(data[0][0], (0.2+\hyperlink{namespaceblackbody}{blackbody}(fc[7][1], data[0][0], 7)/(
+      data[0][8]/(4*pi))) -1, \textcolor{stringliteral}{'m--'})
+87     plt.semilogx(data[0][0], (0.1+\hyperlink{namespaceblackbody}{blackbody}(fc[12][0], data[0][0], 12)
+      /(data[0][13]/(4*pi))) -1, \textcolor{stringliteral}{'b'})
+88     plt.semilogx(data[0][0], (0.1+\hyperlink{namespaceblackbody}{blackbody}(fc[12][1], data[0][0], 12)
+      /(data[0][13]/(4*pi))) -1, \textcolor{stringliteral}{'b--'})
+89     plt.semilogx(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(fc[19][0], data[0][0], 19)/(
+      data[0][20]/(4*pi))) -1, \textcolor{stringliteral}{'}\textcolor{stringliteral}{r')}
+90 \textcolor{stringliteral}{    plt.semilogx(data[0][0], (\hyperlink{namespaceblackbody}{blackbody}(fc[19][1], data[0][0], 19)/(
+      data[0][20]/(4*pi)))-1, }\textcolor{stringliteral}{'r--'})
+91     
+92     plt.xlabel(\textcolor{stringliteral}{'$E (keV)$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+93     plt.ylabel(\textcolor{stringliteral}{'$H\_E(fit)$/$H\_E^\{-1\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+94     plt.title(\textcolor{stringliteral}{'Relative Errors of the Computed Spectra by the $1^\{rt\}$ and
+       $2^\{nd\}$ Fit Procedure, for dataset %d'} %dataset,fontdict=\{\textcolor{stringliteral}{'fontsize'}:12\})
+95     plt.axis([3.2, 20,-0.05,0.3], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+96     plt.legend((\textcolor{stringliteral}{'$l=0.1$, first fit'}, \textcolor{stringliteral}{'$l=0.1$, second fit'}, \textcolor{stringliteral}{'$l=0.5$, first
+       fit'}, \textcolor{stringliteral}{'$l=0.5$, second fit'}, \textcolor{stringliteral}{'$l=0.95$, first fit'}, \textcolor{stringliteral}{'$l=0.95$, second fit'}),
+97            \textcolor{stringliteral}{'upper left'}, shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+98     
+99     plt. savefig(out)
+100     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 8 from was written in %s."} %out
+101     \textcolor{keywordflow}{return} 0
+102 
+103 
+104 
+
+\end{DoxyCode}
+\hypertarget{namespaceplots_a74a7bbf287bc475f37258971812b7f7f}{\index{plots@{plots}!plot\-\_\-fig9\-\_\-a@{plot\-\_\-fig9\-\_\-a}}
+\index{plot\-\_\-fig9\-\_\-a@{plot\-\_\-fig9\-\_\-a}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig9\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig9\-\_\-a (
+\begin{DoxyParamCaption}
+\item[{}]{l, }
+\item[{}]{fc1, }
+\item[{}]{fc2, }
+\item[{}]{fc3, }
+\item[{}]{fc4, }
+\item[{}]{fc5, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_a74a7bbf287bc475f37258971812b7f7f}
+\begin{DoxyVerb}This plot show the dependence of the color correction factor on the relative luminosity 
+for the surface gravity calculated by the 5 procedures.\end{DoxyVerb}
+ 
+
+Definition at line 105 of file plots.\-py.
+
+
+
+Referenced by processing.\-processing\-\_\-data().
+
+
+\begin{DoxyCode}
+105 
+106 \textcolor{keyword}{def }\hyperlink{namespaceplots_a74a7bbf287bc475f37258971812b7f7f}{plot\_fig9\_a}(l, fc1, fc2, fc3, fc4, fc5, dataset, outfolder):
+107     \textcolor{stringliteral}{"""}
+108 \textcolor{stringliteral}{    This plot show the dependence of the color correction factor on the
+       relative luminosity }
+109 \textcolor{stringliteral}{    for the surface gravity calculated by the 5 procedures.}
+110 \textcolor{stringliteral}{    }
+111 \textcolor{stringliteral}{    """}
+112     
+113     plt.figure()
+114     file = \textcolor{stringliteral}{'/set\_%d\_fig9a.png'} %dataset
+115     out = outfolder + file
+116     
+117     plt.plot(l, fc1,  \textcolor{stringliteral}{'b'})
+118     plt.plot(l, fc2,  \textcolor{stringliteral}{'b--'})
+119     plt.plot(l, fc3, \textcolor{stringliteral}{'b-.'})
+120     plt.plot(l, fc4, \textcolor{stringliteral}{'b.'})
+121     plt.plot(l, fc5, \textcolor{stringliteral}{'bo'})
+122     
+123     plt.xlabel(\textcolor{stringliteral}{'$L/L\_\{Edd\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+124     plt.ylabel(\textcolor{stringliteral}{'Color correction $f\_\{c\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+125     plt.title(\textcolor{stringliteral}{'Dependence of the Color Correction Factors to the Luminosity,
+       for dataset %d'} %dataset,fontdict=\{\textcolor{stringliteral}{'fontsize'}:12\})
+126     plt.axis([-0.05, 1.0,1.0,2.1], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+127     plt.legend((\textcolor{stringliteral}{'First fit'}, \textcolor{stringliteral}{'Second fit'}, \textcolor{stringliteral}{'Third fit'}, \textcolor{stringliteral}{'Fourth fit'}, \textcolor{stringliteral}{'Fifth
+       fit'}),\textcolor{stringliteral}{'lower right'}, shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+128     
+129     plt. savefig(out)
+130     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 9a from was written in %s."} %out
+131     \textcolor{keywordflow}{return} 0
+132     
+    
+\end{DoxyCode}
+\hypertarget{namespaceplots_a92449504b21a76afd26841039c23c6f2}{\index{plots@{plots}!plot\-\_\-fig9\-\_\-b@{plot\-\_\-fig9\-\_\-b}}
+\index{plot\-\_\-fig9\-\_\-b@{plot\-\_\-fig9\-\_\-b}!plots@{plots}}
+\subsubsection[{plot\-\_\-fig9\-\_\-b}]{\setlength{\rightskip}{0pt plus 5cm}def plots.\-plot\-\_\-fig9\-\_\-b (
+\begin{DoxyParamCaption}
+\item[{}]{l, }
+\item[{}]{fc1, }
+\item[{}]{fc2, }
+\item[{}]{fc3, }
+\item[{}]{fc4, }
+\item[{}]{fc5, }
+\item[{}]{dataset, }
+\item[{}]{outfolder}
+\end{DoxyParamCaption}
+)}}\label{namespaceplots_a92449504b21a76afd26841039c23c6f2}
+\begin{DoxyVerb}This plot show the dependence of the normalized color correction factor 
+(to the first fit procedure) on the relative luminosity for the surface.
+\end{DoxyVerb}
+ 
+
+Definition at line 133 of file plots.\-py.
+
+
+\begin{DoxyCode}
+133 
+134 \textcolor{keyword}{def }\hyperlink{namespaceplots_a92449504b21a76afd26841039c23c6f2}{plot\_fig9\_b}(l, fc1, fc2, fc3, fc4, fc5, dataset, outfolder):
+135     \textcolor{stringliteral}{"""}
+136 \textcolor{stringliteral}{    This plot show the dependence of the normalized color correction factor }
+137 \textcolor{stringliteral}{    (to the first fit procedure) on the relative luminosity for the surface.}
+138 \textcolor{stringliteral}{    """}
+139     
+140     plt.figure()
+141     file = \textcolor{stringliteral}{'/set\_%d\_fig9b.png'} %dataset
+142     out = outfolder + file
+143     
+144     afc1 = array(fc1)
+145     afc2 = array(fc2)
+146     afc3 = array(fc3)
+147     afc4 = array(fc4)
+148     afc5 = array(fc5)
+149 
+150     plt.plot(l, afc2/afc1,  \textcolor{stringliteral}{'r--'})
+151     plt.plot(l, afc3/afc1, \textcolor{stringliteral}{'bo'})
+152     plt.plot(l, afc4/afc1, \textcolor{stringliteral}{'g'})
+153     plt.plot(l, afc5/afc1, \textcolor{stringliteral}{'-.'})
+154 
+155     plt.xlabel(\textcolor{stringliteral}{'$L/L\_\{Edd\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+156     plt.ylabel(\textcolor{stringliteral}{'$f\_\{c,i\}/f\_\{c,1\}$'},fontdict=\{\textcolor{stringliteral}{'fontsize'}:20\})
+157     plt.title(\textcolor{stringliteral}{'Ratio of the first Color Correction Factor to the other 4 fits 
+       vs Luminosity, for dataset %d'} %dataset,fontdict=\{\textcolor{stringliteral}{'fontsize'}:12\})
+158     plt.axis([0, 1.0,0.5,1.2], fontdict=\{\textcolor{stringliteral}{'fontsize'}:18\},gridsize=10)
+159     plt.legend((\textcolor{stringliteral}{'$f\_\{c,2\}/f\_\{c,1\}$'}, \textcolor{stringliteral}{'$f\_\{c,3\}/f\_\{c,1\}$'}, \textcolor{stringliteral}{'$f\_\{c,4\}/f\_\{c,1\}$'}, \textcolor{stringliteral}{
+      '$f\_\{c,5\}/f\_\{c,1\}$'}),\textcolor{stringliteral}{'lower right'}, shadow=\textcolor{keyword}{True}, fancybox=\textcolor{keyword}{True})
+160     
+161     plt. savefig(out)
+162     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Fig. 9b from was written in %s."} %out
+163     \textcolor{keywordflow}{return} 0
+164 
+165 
+
+\end{DoxyCode}

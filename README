@@ -1,0 +1,6 @@
+A set of modules to process, parse and analyze the data from X-ray atmosphere simulations.
+
+FORMAT_CALCULATOR: modify long data files into small sets to process the fits in a more suitable way.
+FIT_CALCULATOR : once you have the data in the right format, this module calculate the fits.
+
+Marina von Steinkirch, spring/2013

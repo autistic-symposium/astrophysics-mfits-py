@@ -1,0 +1,70 @@
+\begin{thebibliography}{}
+
+\bibitem{BI00}[1] Bildsten,  L., {\it Theory and Observation of Type I X-Ray Bursts
+from Neutron Stars}, arXiv:astro-ph/0001135v1 2000
+
+\bibitem{DAM90}[2] Damien et al  1990
+
+\bibitem{EBI87}[3] Ebisuzaki, T. 1987, PASJ, 39, 287 1987
+
+\bibitem{FLE71}[4]  Fleck, A., Journal of Computational Physics, Vol. 8, p.313 1971
+
+\bibitem{GU10}[5] Guillot, Rutledge, $\&$ Brown, {\it Neutron Star Radius
+Measurement with the Quiescent Low-Mass X-ray Binary U24 in NGC 6397} 2010
+
+\bibitem{HVH75}[6]  Hansen, C. J., $\&$ van Horn, H. M. 1975, ApJ, 195, 735 1975
+
+\bibitem{LAT90}[7] Latimmer et al.  1990
+\\
+\bibitem{LM07}[8] Lattimer, J. M. $\&$ Prakash, M., Phys. Rep., 442, 109 2007
+
+\bibitem{LAT10}[9] Lattimer et al, Astrophys.J. 722 (2010) 33-54 
+
+\bibitem{LE93}[10] Lewin,  W.H.G.,  van Paradijs, J., $\&$ Taam, R.E. , Space Sci. Rev. {\bf 62}, 223  1993
+
+\bibitem{LIN92}[11] Lindblom, L. 1992, ApJ, 398, 569 1992
+
+\bibitem{LON86}[12] London, R. A., Taam, R.E., $\&$ Howard, W.M. 1986, Apj, 306, 170 1986
+
+\bibitem{LO08}[13] Lorimer, D.R., Liv. Rev. Rel. {\bf 11}, 8 2008
+
+\bibitem{MAJ05}[14] Majczyna, A., Madej, J., Joss, P. C., $\&$ Rozanska, A. 2005, A$\&$A, 430, 643 2005
+
+\bibitem{MAD04}[15] Madej, J., Joss, P.C., $\&$ Rozanska, A. ApJ, 602, 904 2004
+
+\bibitem{THORN}[16] Misner, W.C., Thorne, K.S., $\&$ Wheeler, J.A., {\it Gravitation}, Publisher: W. H. Freeman 1973
+
+\bibitem{PAV91}[17] Pavlov, G. G., Shibanov, I.A., $\&$ Zavlin, V.E. 1991, MNRAS, 253, 193 1991
+
+\bibitem{RO73}[18] Rosenbluth, M.,  et al.  1973. Ap. J.  184 : 907 1973
+
+\bibitem{RU99}[19] Rutledge, R., Bildsten, L.,  Brown, E., et al. Astrophys. J {\bf 514}, 945 1999
+
+\bibitem{LAT12}[20] Steiner et. al, {\it The Neutron Star Mass-Radius Relation and the Equation of State of Dense Matter}, arXiv:1205.6871v1 2012
+
+\bibitem{SB03}[21] Strohmayer, T., $\&$ L. Bildsten, {\it New Views of Thermonuclear
+Bursts}, arXiv:astro-ph/0301544v2 2003
+
+\bibitem{SPW10}[22] Suleimanov, V., Poutanen, J., $\&$ Werner, K. 2011b, A$\&$A, 527, A139 2010
+
+\bibitem{SPW12}[23]  Suleimanov, V., Poutanen, J., $\&$ Werner, K.  2012, A$\&$A, 545, A120 2012
+
+\bibitem{VAN90}[24] van Paradijs, J., et al. 1990, A$\&$A, 235, 156  1990
+
+\bibitem{WLP80}[25] Walter et al, {\it X-ray Bursters and the X-ray Sources of the Galactic Bulge} 1980
+
+\bibitem{WIN95}[26] Winslow, A., Journal of Computational Physics, vol. 117, issue 2, pp. 262-273 1995
+
+
+\bibitem{SPWWEB}[27] {\it http://astro.uni-tuebingen.de/~suleiman/} 2012
+
+\bibitem{LIST}[28] {\it http://www.sron.nl/~jeanz/bursterlist.html} 2012
+
+\bibitem{py}[29] {\it http://www.python.org/}
+
+\bibitem{numpy}[30]  {\it http://numpy.scipy.org/}
+
+\bibitem{git}[31] {\it https://bitbucket.org/steinkirch/x-ray-bursters-ii}
+
+
+\end{thebibliography}
