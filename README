@@ -1,6 +1,22 @@
-A set of modules to process, parse and analyze the data from X-ray atmosphere simulations.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|											|
+|	MFITS 2.0 - Statistical Analyses for X-ray Burst Simulations			|
+|	     Marina Wahl, Stony Brook University & LANL, 2013-14			|	
+|											|
+|											|
+|	This package is used to calculates 5 distinct fits on the data			|
+|	generated from the X-ray atmosphere simulations.					|
+|											|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FORMAT_CALCULATOR: modify long data files into small sets to process the fits in a more suitable way.
-FIT_CALCULATOR : once you have the data in the right format, this module calculate the fits.
 
-Marina von Steinkirch, spring/2013
+**************************
+* INSTRUCTIONS TO RUN IT *
+**************************
+
+1) The data to be analyzed should be inside /data/ folder.
+2) The names/paths for the above data should be changed into the constant files: /src/constants.py
+3) Run /src/main.py
+4) You should get the outputs under the folder /output/ and a log file under /logs/
+
+
